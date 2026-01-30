@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
-
-# Tell this script to exit if there are any errors.
-# You should have this in every custom script, to ensure that your completed
-# builds actually ran successfully without any errors!
+#!/bin/bash
 set -oue pipefail
 
-# Your code goes here.
-echo 'This is an example shell script'
-echo 'Scripts here will run during build if specified in recipe.yml'
+# Aqui você adiciona pacotes do Fedora que o Bazzite não traz por padrão
+# Exemplo: Instalando o editor de texto e ferramentas de rede
+dnf install -y nano wget curl
+
+# Se quiser adicionar algum repositório extra ou comando de performance, coloque aqui
+echo "Otimizações do Velyx aplicadas com sucesso!"
